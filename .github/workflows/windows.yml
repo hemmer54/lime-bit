@@ -1,0 +1,22 @@
+name: Windows build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.85.0
+      - name: Check formatting
+        run: cargo fmt -- --check
+      - name: Check
+        run: cargo check
+      - name: Test
+        run: cargo test
+      - name: Release build
+        run: cargo build --release
