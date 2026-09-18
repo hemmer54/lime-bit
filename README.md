@@ -2,7 +2,7 @@
 
 Lime-Bit is a Rust desktop BitTorrent/download client built with GPUI and
 [`gosh-dl`](https://github.com/goshitsarch-eng/gosh-dl). It is currently an
-early-stage beta focused on real torrent transfers, persistence, diagnostics,
+early-stage beta focused on torrent transfers, persistence, diagnostics,
 and a compact dark green/lime interface.
 
 > **Beta software:** test with non-critical data. The torrent engine currently
